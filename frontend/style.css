@@ -1,0 +1,345 @@
+body {
+  font-family: "Poppins", sans-serif;
+  /* background-color: #fff7fa; */
+  background: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  color: white;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Header content layout */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* space between photo and title */
+}
+
+/* Profile photo style */
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;      
+  border: 2px solid #ff5c9b;
+  object-fit: cover; 
+}
+
+
+.learning {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(224, 73, 184, 0.1);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.topic label {
+  flex: 1;
+  text-align: left;
+  color: #ff5c9b;
+  font-weight: 600;
+}
+
+progress {
+  flex: 2;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ffe0eb;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #ff7eb3, #ff5c9b);
+  border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #ff7eb3, #ff5c9b);
+  border-radius: 10px;
+}
+
+ button { 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-weight: 600;
+  transition: background 0.3s;
+} 
+
+ button:hover {
+  opacity: 0.9;
+} 
+
+/* Style for +10% and 📖 Lessons buttons */
+button.progress-btn, button.lessons-btn {
+  background-color: #ff5c9b;  
+  color: white;                
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button.progress-btn:hover, button.lessons-btn:hover {
+  background-color: #ff84b5;   
+  transform: scale(1.05);    
+}
+
+
+/* Tracker & Lessons navigation links */
+header nav a {
+  color: white;          
+  text-decoration: none; 
+  font-weight: bold;     
+  margin-right: 1rem;    
+  transition: color 0.3s;
+  position: relative; 
+}
+
+/* Hover effect: pink underline animation */
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #ff5c9b; /* Pink underline */
+  transition: width 0.3s;
+}
+
+header nav a:hover::after {
+  width: 100%;               /* Animate underline full width */
+}
+
+/* Active nav link */
+header nav a.active {
+  color: white;          /* Pink text */
+  text-shadow: 0 0 8px #ff5c9b; /* Neon glow */
+  font-weight: bold;
+}
+
+/* Optional: underline for active */
+header nav a.active::after {
+  width: 100%;               
+  height: 2px;
+  background-color: #ff5c9b;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+
+
+/* Add + Reset buttons */
+.add-btn {
+  background-color: #ff5c9b;
+  color: white;
+  margin-top: 10px;
+}
+
+.reset-btn {
+  background-color: #b465da;
+  color: white;
+  margin: 2rem auto;
+  display: block;
+}
+
+/* Summary section styling */
+.summary {
+  background: #fff0f5;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(226, 62, 185, 0.1);
+}
+
+.summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.summary-bar label {
+  flex: 1;
+  text-align: left;
+  color: #ff5c9b;
+  font-weight: 600;
+}
+
+.summary-bar progress {
+  flex: 2;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.summary-bar progress::-webkit-progress-bar {
+  background-color: #ffe0eb;
+}
+
+.summary-bar progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #ff7eb3, #ff5c9b);
+}
+
+.summary-bar progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #ff7eb3, #ff5c9b);
+}
+
+.summary-bar span {
+  flex: 0.5;
+  text-align: right;
+  color: #ff5c9b;
+  font-weight: bold;
+}
+
+.resources h2, .saved-lessons h2 {
+  color: white;
+}
+
+.resources input, .resources textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #b465da;
+}
+
+.resources input::placeholder, .resources textarea::placeholder {
+  color: #ff7eb3;
+}
+
+.resources button {
+  background-color: #ff7eb3;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+/* Lessons list styling */
+.saved-lessons ul {
+  list-style: none;       /* Remove default bullets */
+  padding: 0;
+}
+
+.saved-lessons li {
+  background-color: #1a1a1a; /* Dark background for cyberpunk feel */
+  color: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 4px solid #ff5c9b; /* Pink accent */
+  border-radius: 8px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.saved-lessons li:hover {
+  background-color: #2a2a2a;
+  transform: scale(1.02);
+}
+
+/* Lesson title and skill label */
+.saved-lessons strong {
+  font-size: 1.1rem;
+  color: #ff5c9b;  /* Pink title for emphasis */
+}
+
+.saved-lessons em {
+  font-style: normal;
+  color: #ff84b5;  /* Lighter pink for skill label */
+  margin-left: 0.5rem;
+}
+
+/* Lesson link styling */
+.saved-lessons a {
+  color: #ff5c9b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.saved-lessons a:hover {
+  color: #ff84b5;
+  text-decoration: underline;
+}
+
+/* Lesson note styling */
+.saved-lessons p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Delete button */
+.saved-lessons button {
+  background-color: #ff5c9b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.saved-lessons button:hover {
+  background-color: #ff84b5;
+  transform: scale(1.05);
+}
+
+
+/* Footer styling similar to header */
+footer {
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  border-top: 2px solid #ff5c9b; 
+}
+
+footer a {
+  color: white;          
+  text-decoration: none; 
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ff5c9b;       
+}
+

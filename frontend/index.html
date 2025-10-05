@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Learning Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="header-content">
+    <img src="./images/myphoto.jpeg" alt="My Profile" class="profile-photo">
+    <h1>Learning Tracker</h1>
+  
+  <nav>
+    <a href="index.html" class="active">👩🏻‍💻 Tracker</a>  
+    <a href="lessons.html?all=true" >📚 All Lessons</a>
+  </nav>
+  </div>
+</header>
+
+  <main>
+    <!-- Summary Section -->
+    <section class="summary">
+      <h2>🔥 Overall Progress</h2>
+      <div class="summary-bar">
+        <label>Frontend Progress </label>
+        <progress id="frontendSummary" value="0" max="100"></progress>
+        <span id="frontendSummaryPercent">0%</span>
+      </div>
+      <div class="summary-bar">
+        <label>Backend Progress</label>
+        <progress id="backendSummary" value="0" max="100"></progress>
+        <span id="backendSummaryPercent">0%</span>
+      </div>
+      <button class="add-btn" onclick="window.location.href='lessons.html?all=true'">📚 View All Lessons</button>
+    </section>
+
+    <!-- Frontend Section -->
+    <section class="learning">
+      <h2>Frontend Development 👩🏻‍🎓</h2>
+      <div id="frontendSkills"></div>
+      <button class="add-btn" onclick="addSkill('frontend')">👉🏻 Add Frontend Skill</button>
+    </section>
+
+    <!-- Backend Section -->
+    <section class="learning">
+      <h2>Backend Development 👩🏻‍🎓</h2>
+      <div id="backendSkills"></div>
+      <button class="add-btn" onclick="addSkill('backend')"> 👉🏻 Add Backend Skill</button>
+    </section>
+
+    <!-- UX/UI Design -->
+    <section id="uxuiSection" class="learning">
+      <h2>UX/UI Design</h2>
+      <div id="uxuiSkills" class="skills-container"></div>
+      <button class="add-btn" onclick="addSkill('uxui')">👉🏻 Add UX/UI Skill</button>
+    </section>
+
+    <!-- Swedish Language -->
+    <section id="swedishSection" class="learning">
+      <h2>Swedish Language</h2>
+      <div id="swedishSkills" class="skills-container"></div>
+      <button class="add-btn" onclick="addSkill('swedish')">👉🏻 Add Swedish Skill</button>
+    </section>
+
+    <!-- English Language -->
+    <section id="englishSection" class="learning">
+      <h2>English Language</h2>
+      <div id="englishSkills" class="skills-container"></div>
+      <button class="add-btn" onclick="addSkill('english')">👉🏻 Add English Skill</button>
+    </section>
+
+    <!-- Reset -->
+    <button class="reset-btn" onclick="resetProgress()">Reset All Progress</button>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> My Learning Tracker | Code by Kunnikar 👩🏻‍🎤</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

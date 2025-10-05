@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Lessons</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="skillHeader">Skill Lessons</h1>
+    <nav>
+      <a href="index.html">👩🏻‍💻 Tracker</a> 📚 
+      <a href="lessons.html?all=true" class="active"> All Lessons</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="resources" id="addLessonSection" >
+      <h2>Add Lesson for <span id="skillName"></span></h2>
+      <input type="text" class="lessonTitle" id="lessonTitle" placeholder="Lesson title" />
+      <input type="url" id="lessonLink" placeholder="Lesson URL (optional)" />
+      <textarea id="lessonNote" class="letssonNote" placeholder="Notes about this lesson"></textarea>
+      <button onclick="addLesson()">👉🏻 Add Lesson</button>
+    </section>
+
+    <section class="saved-lessons">
+      <h2>Lessons for 📚 <span id="skillNameDisplay"></span></h2>
+      <ul id="lessonsList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> My Learning Tracker</p>
+  </footer>
+
+  <script src="lessons.js"></script>
+</body>
+</html>
