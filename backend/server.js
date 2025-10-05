@@ -23,6 +23,16 @@ app.get('/', (req, res) => {
   res.send('🎓 Learning Tracker Backend is Running!');
 });
 
+app.get('/test', async (req, res) => {
+  try {
+    const stats = await mongoose.connection.db.stats();
+    res.json({ connected: true, stats });
+  } catch {
+    res.status(500).json({ connected: false });
+  }
+});
+
+
 // Start server
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
