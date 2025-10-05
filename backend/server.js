@@ -18,11 +18,6 @@ connectDB();
 app.use('/api/lessons', lessonsRoutes);
 app.use('/api/skills', skillsRoutes);
 
-// Root endpoint
-app.get('/', (req, res) => {
-  res.send('🎓 Learning Tracker Backend is Running!');
-});
-
 app.get('/test', async (req, res) => {
   try {
     const stats = await mongoose.connection.db.stats();
@@ -32,7 +27,10 @@ app.get('/test', async (req, res) => {
   }
 });
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.send('🎓 Learning Tracker Backend is Running!');
+});
 
-// Start server
-const PORT = process.env.PORT || 5500;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+// Export app for Vercel
+export default app;
