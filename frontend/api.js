@@ -1,5 +1,4 @@
-const API_URL =
-  'https://learning-tracker-nj04qff8e-kunnikars-projects.vercel.app/'; 
+const API_URL = 'https://learning-tracker-khaki-ten.vercel.app/'; 
 
 // Fetch lessons for a specific category & skill
 export async function getLessons(category, skill) {
