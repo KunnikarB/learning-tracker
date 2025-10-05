@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: learning-tracker-backend
+    name: learning-tracker
     plan: free
     branch: main
     runtime: node
@@ -8,6 +8,6 @@ services:
     startCommand: npm start
     envVars:
       - key: MONGO_URI
-        value: your-mongodb-uri-here
+        value: mongodb+srv://kunnikarboon_db_user:26gmSoa6PntP6tMF@cluster0.eljpkau.mongodb.net/learning-tracker?retryWrites=true&w=majority 
       - key: PORT
         value: 5500
