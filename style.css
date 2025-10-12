@@ -255,9 +255,13 @@ header nav a.active::after {
 }
 
 /* Lessons list styling */
+.saved-lessons h2 {
+  text-align: center;
+}
 .saved-lessons ul {
   list-style: none;       /* Remove default bullets */
   padding: 0;
+  text-align: left;
 }
 
 .saved-lessons li {
