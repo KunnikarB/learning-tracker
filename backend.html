@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="backend.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Backend Learning Tracker </title>
+</head>
+<body>
+  <header>
+  <div class="header-content">
+    <img src="myphoto.jpeg" alt="My Profile" class="profile-photo">
+    <h1>Learning Tracker</h1>
+  
+  <nav>
+    <a href="index.html">👩🏻‍💻 Tracker</a>  
+    <a href="lessons.html?all=true" >📚 All Lessons</a>
+    <a href="backend.html" class="active">🗄️ Backend</a>
+  </nav>
+  </div>
+</header>
+
+  <!-- October 6-10 2025 -->
+
+  <!-- Query Practice -->
+  <div class="wrap">
+    <header class="page-header">
+      <div class="badge">Query Practice</div>
+      <div>
+        <h1>SQL Database & API — Players · Games · Scores</h1>
+        <p class="lead">Express + PostgreSQL project. Fetching real data from API endpoints</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>API Routes</h2>
+        
+        <div class="routes">
+          <p>Get /players-scores</p>
+          <p>Get /top-players</p>
+          <p>Get /inactive-players</p>
+          <p>Get /popular-genres</p>
+          <p>Get /recent-players</p>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="section-title">
+          <h2>ER Diagram</h2>
+          <span class="muted">Tables & relationships</span>
+        </div>
+        <div class="diagram">
+          <img src="images/Diagram.png" alt="ER Diagram">
+        </div>
+      </aside>
+
+      <section class="card">
+        <div class="section-title ">
+          <h2>Required packages</h2>  
+        </div>
+        <div>
+        <p >Express, pg, dotenv, zod</p>
+        <p>dev: nodemon, typescript, ts-node, @types/express, @types/node</p>
+        <p>DB: PostgreSQL</p>
+      </section>
+
+      <aside class="card">
+        <div class="section-title">
+          <h2>Importing</h2>
+          <span class="muted">server.ts</span>
+        </div>
+        <div class="routes">
+          <img src="images/Import.png" alt="Database Schema">
+
+          <p>express → A Node.js framework for building web servers and APIs.</p>
+          <p>pg → PostgreSQL client library for Node.js.</p>
+          <p>dotenv → Loads environment variables from a .env file into process.env.</p>
+          <p>zod → A validation library for schemas, used here to validate environment variables and query parameters.</p>
+        </div>
+      </aside>
+      <section class="card">
+        <div class="section-title">
+          <h2>Setup Environment</h2>
+        </div>
+        </section>
+        <aside class="card">
+        <div class="section-title">
+          <h2>🌱 Load Environment Variables</h2>
+          <span class="muted">server.ts</span>
+        </div>
+        <div class="routes">
+          <p class="code"> dotenv.config();</p>
+          <p class="code">const app = express();</p>
+          <p class="code">const { Pool } = pg;</p>
+          <p class="code">const port = process.env.PORT || 3000;</p>
+
+          <p>Reads the .env file and makes its variables accessible via process.env.</p>
+
+          <p>{ port } → The port on which the server will listen for incoming requests.</p>
+
+          <p><span class="muted">app</span> → The main Express application instance.</p>
+        </aside>
+
+      <section class="card">
+        <div class="section-title">
+          <h2>Validate Variables</h2    >
+        </div>
+      </section>
+      <aside class="card">
+        <div class="section-title">
+          <h2>🌱 Zod Validation</h2>
+          <span class="muted">server.ts</span>
+        </div>
+        <div class="routes">
+          <img src="images/zod.png" alt="Zod Validation">
+          <p>Defines a Zod schema to ensure all database environment variables exist and are valid.</p>
+          <p>.transform() converts the DB_PORT from string → number.</p>
+          
+      </aside>
+      <section class="card">
+        <div class="section-title">
+          <h2>Parse and Validate</h2>
+        </div>
+      </section>
+      <aside class="card">
+        <div class="section-title">
+          <h2>🌱 Database Connection</h2>
+          <span class="muted">server.ts</span>
+        </div>
+        <div class="routes">
+          <img src="images/parse.png" alt="Database Connection">
+          <p>Validates process.env against the schema.</p>
+        </div>
+      </aside>
+
+      <section class="card">
+        <div class="section-title">
+          <h2>Init PostgreSQL Connection</h2>
+          <
+        </div>
+        
+      </section>
+      <aside class="card">
+        <div class="section-title">
+          <h2>🌱 PostgreSQL Client</h2>
+          <span class="muted">server.ts</span>
+        </div>
+        <div class="routes">
+          <img src="images/pool.png" alt="PostgreSQL Client">
+          <p>Creates a PostgreSQL connection pool using the validated environment variables.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Project on 👩🏻‍💻
+      <a href="https://github.com/KunnikarB/game-studio-api">GitHub</a>
+    </footer>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> My Learning Tracker | Code by Kunnikar 👩🏻‍🎤</p>
+  </footer>
+
+  <script>
+    src = "script.js"
+  </script>
+</body>
+</html>
