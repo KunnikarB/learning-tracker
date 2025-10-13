@@ -23,21 +23,23 @@
 
   <!-- October 6-10 2025 -->
 
-  <!-- Query Practice -->
+  <!-- Query Practice Game studio -->
   <div class="wrap">
-    <header class="page-header">
-      <div class="badge">Query Practice</div>
-      <div>
-        <h1>SQL Database & API — Players · Games · Scores</h1>
-        <p class="lead">Express + PostgreSQL project. Fetching real data from API endpoints</p>
+    <header class="header-content">
+      <div class="badge">
+        <h2>Query Practice</h2>
       </div>
     </header>
 
-    <main class="grid">
+    <div id="content" class="hidden">
+      <main class="grid">
+      
+      <h2 class="section-title">SQL & API</h2>
+      <p class="lead">Express + PostgreSQL project. Fetching real data from API endpoints</p>
+      <!-- API Routes -->
       <section class="card">
-        <h2>API Routes</h2>
-        
-        <div class="routes">
+        <h2>API Routes</h2> 
+        <div class="card_content">
           <p>Get /players-scores</p>
           <p>Get /top-players</p>
           <p>Get /inactive-players</p>
@@ -45,7 +47,6 @@
           <p>Get /recent-players</p>
         </div>
       </section>
-
       <aside class="card">
         <div class="section-title">
           <h2>ER Diagram</h2>
@@ -55,23 +56,33 @@
           <img src="images/Diagram.png" alt="ER Diagram">
         </div>
       </aside>
-
+      <!-- PostgreSQL -->
       <section class="card">
-        <div class="section-title ">
-          <h2>Required packages</h2>  
+          <h2>PostgreSQL</h2>  
+      </section>
+      <aside class="card">
+        <div class="section-title">
+          <h2>Database</h2>
+          <span class="muted">Tables & sample data</span>
         </div>
-        <div>
+        <div class="diagram">
+          <img src="images/database.png" alt="Database Schema">
+        </div>
+      </aside>
+      <!-- Required packages -->
+      <section class="card">
+          <h2>Packages</h2>        
+        <div class="card_content">
         <p >Express, pg, dotenv, zod</p>
         <p>dev: nodemon, typescript, ts-node, @types/express, @types/node</p>
         <p>DB: PostgreSQL</p>
       </section>
-
       <aside class="card">
         <div class="section-title">
           <h2>Importing</h2>
           <span class="muted">server.ts</span>
         </div>
-        <div class="routes">
+        <div class="card_content">
           <img src="images/Import.png" alt="Database Schema">
 
           <p>express → A Node.js framework for building web servers and APIs.</p>
@@ -80,17 +91,17 @@
           <p>zod → A validation library for schemas, used here to validate environment variables and query parameters.</p>
         </div>
       </aside>
+
+      <!-- Setup Environment -->
       <section class="card">
-        <div class="section-title">
           <h2>Setup Environment</h2>
-        </div>
-        </section>
-        <aside class="card">
+      </section>
+      <aside class="card">
         <div class="section-title">
           <h2>🌱 Load Environment Variables</h2>
           <span class="muted">server.ts</span>
         </div>
-        <div class="routes">
+        <div class="card_content">
           <p class="code"> dotenv.config();</p>
           <p class="code">const app = express();</p>
           <p class="code">const { Pool } = pg;</p>
@@ -101,58 +112,68 @@
           <p>{ port } → The port on which the server will listen for incoming requests.</p>
 
           <p><span class="muted">app</span> → The main Express application instance.</p>
-        </aside>
+      </aside>
 
+      <!-- Validate Variables -->
       <section class="card">
-        <div class="section-title">
-          <h2>Validate Variables</h2    >
-        </div>
+          <h2>Zod Validate </h2    >       
       </section>
       <aside class="card">
         <div class="section-title">
-          <h2>🌱 Zod Validation</h2>
+          <h2>🌱Validation Variables</h2>
           <span class="muted">server.ts</span>
         </div>
-        <div class="routes">
+        <div class="card_content">
           <img src="images/zod.png" alt="Zod Validation">
           <p>Defines a Zod schema to ensure all database environment variables exist and are valid.</p>
           <p>.transform() converts the DB_PORT from string → number.</p>
           
       </aside>
+
+      <!-- ESLint configure -->
       <section class="card">
+          <h2>ESLint configure</h2>
+      </section>
+      <aside class="card">
         <div class="section-title">
-          <h2>Parse and Validate</h2>
+          <h2>🌱 ESLint Rules</h2>
+          <span class="muted">server.ts</span>
         </div>
+        <div class="card_content">
+          <img src="images/Eslint.png" alt="ESLint Configuration">
+          <p>ESLint is configured to enforce consistent code style.</p>
+        </div>      
+      </aside>
+
+      <section class="card">
+          <h2>Parse and Validate</h2>        
       </section>
       <aside class="card">
         <div class="section-title">
           <h2>🌱 Database Connection</h2>
           <span class="muted">server.ts</span>
         </div>
-        <div class="routes">
+        <div class="card_content">
           <img src="images/parse.png" alt="Database Connection">
           <p>Validates process.env against the schema.</p>
         </div>
       </aside>
 
-      <section class="card">
-        <div class="section-title">
-          <h2>Init PostgreSQL Connection</h2>
-          <
-        </div>
-        
+      <section class="card">       
+          <h2>Init PostgreSQL Connection</h2>       
       </section>
       <aside class="card">
         <div class="section-title">
           <h2>🌱 PostgreSQL Client</h2>
           <span class="muted">server.ts</span>
         </div>
-        <div class="routes">
+        <div class="card_content">
           <img src="images/pool.png" alt="PostgreSQL Client">
           <p>Creates a PostgreSQL connection pool using the validated environment variables.</p>
         </div>
       </aside>
-    </main>
+      </main>
+    </div>
 
     <footer>
       Project on 👩🏻‍💻
@@ -160,12 +181,196 @@
     </footer>
   </div>
 
+  <!-- Prisma UserLanguage -->
+  <div class="wrap">
+    <header class="header-content">
+      <div class="badge">
+        <h2>Prisma Webshop</h2>
+      </div>
+    </header>
+
+    <div id="content" class="hidden">
+      <main class="grid">
+      
+      <h2 class="section-title">SQL & API</h2>
+      <p class="lead">Webshop with Prisma, Express, and React</p>
+      <!-- API Routes -->
+      <section class="card">
+        <h2>API Routes</h2> 
+        <div class="card_content">
+          <p>Post /products</p>
+          <p>Get /products</p>
+          <p>Patch /products/:id</p>
+          <p>Delete /products/:id</p>
+        </div>
+      </section>
+      <!-- Diagram -->
+      <aside class="card">
+        <div class="section-title">
+          <h2>ER Diagram</h2>
+          <span class="muted">Tables & relationships</span>
+        </div>
+        <div class="diagram">
+          <img src="images/webshop-diagram.png" alt="ER Diagram">
+        </div>
+      </aside>
+
+      <!-- DB Relationships -->
+      <section class="card">
+          <h2>Relationship </h2>        
+      </section>
+      <aside class="card">
+        <div class="section-title">
+          <h2>Summary</h2>
+          <span class="muted">Description</span>
+        </div>
+        <div class="card_content">
+          <img src="images/webshop-ERD.png" alt="Database Schema">   
+      </aside>
+
+      <!-- Step 1: Create Project -->
+      <section class="card">
+        <h2>Create Project</h2> 
+
+      </section>
+      <!-- Install dependencies -->
+      <aside class="card">
+        <div class="section-title">
+          <h2>🌱 Initialize Project</h2>
+          <span class="muted">Install dependencies</span>
+        </div>
+        <div class="card_content">
+          <img src="images/init1.png" alt="ER Diagram">
+        </div>
+        <div class="card_content">
+          <img src="images/dep.png" alt="ER Diagram">
+        </div>
+      </aside>
+
+      <!-- Step 2: Initialize Prisma -->
+      <section class="card">
+        <h2>Initialize Prisma</h2> 
+      </section>
+      <!-- Create schema.prisma -->
+      <aside class="card">
+        <div class="section-title">
+          <h2>Creates a prisma folder</h2>
+          <span class="muted">Creates schema.prisma</span>
+        </div>
+        <div class="card_content">
+          <img src="images/init-prisma.png" alt="init-prisma">
+        </div>
+      </aside>
+
+      <!-- Step 3: Configure Database -->
+      <section class="card">
+        <h2>Configure DB</h2> 
+      </section>
+      <!-- Set DATABASE_URL -->
+      <aside class="card">
+        <div class="section-title">
+          <h2>Set DATABASE_URL</h2>
+          <span class="muted">.env</span>
+        </div>
+        <div class="card_content">
+          <img src="images/config-db.png" alt="env">
+        </div>
+      </aside>
+
+      <!-- Step 4: Define Data Model Prisma Schema -->
+      <section class="card">
+          <h2>Prisma Schema</h2>  
+      </section>
+      <aside class="card">
+        <div class="section-title">
+          <h2>Model</h2>
+          <span class="muted">schema.prisma</span>
+        </div>
+        <div class="diagram">
+          <img src="images/webshop-model1.png" alt="Database Schema">
+        </div>
+        <div class="diagram">
+          <img src="images/webshop-model2.png" alt="Database Schema">
+        </div>
+      </aside>
+
+      <!-- Step 5 : Apply the database Schema -->
+       <section class="card">
+        <h2>Migrate & Generate</h2> 
+      </section>
+      <aside class="card">
+        <div class="section-title">
+          <h2>Apply the Database Schema</h2>
+          <span class="muted">schema.prisma</span>
+        </div>
+        <div class="card_content">
+          <img src="images/migrate.png" alt="migrate prisma">
+        </div>
+        <div class="card_content">
+          <img src="images/generate.png" alt="generate prisma">
+        </div>
+        <div class="card_content">
+        <p>
+          1. Migrate the database to create tables based on the Prisma schema.
+        </p>
+          <p>
+          2. Generate the Prisma Client to interact with the database.  
+          </p>
+          <p>
+          3. Create a seed.ts file to populate initial data.
+          </p>
+          <p>
+          4. Update package.json to include the seed script.
+          <pre class="card_content">
+          "scripts": {
+            "dev": "nodemon server.ts"
+          },
+          "prisma": {
+            "seed": "ts-node prisma/seed.ts"
+          }
+          </pre>
+          </p>
+          <p>
+          5. Run the seed script to insert sample data into the database.
+             <pre class="card_content">
+              npx prisma db push
+              </pre>
+          </p>
+        </div>
+      </aside>
+
+      <!-- Required packages -->
+      <section class="card">
+          <h2>Packages</h2>        
+        <div class="card_content">
+        <p >Express, Prisma</p>
+        <p>dev: nodemon, typescript, ts-node, @types/express, @types/node, @prisma/client</p>
+        <p>DB: Prisma postgres</p>
+      </section>
+
+      <aside class="card">
+        <div class="section-title">
+          <h2>Importing</h2>
+          <span class="muted">server.ts</span>
+        </div>
+        <div class="card_content">
+          <img src="images/webshop-import.png" alt="Importing Modules">
+        </div>
+      </aside>
+      </main>
+    </div>
+
+    <footer>
+      Project on 👩🏻‍💻
+      <a href="https://github.com/KunnikarB/webshop-prisma">GitHub</a>
+    </footer>
+  </div>
+
+
   <footer>
     <p>&copy; <span id="year"></span> My Learning Tracker | Code by Kunnikar 👩🏻‍🎤</p>
   </footer>
 
-  <script>
-    src = "script.js"
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -104,3 +104,6 @@ function openLessons(category, skill) {
     category
   )}&skill=${encodeURIComponent(skill)}`;
 }
+
+
+
