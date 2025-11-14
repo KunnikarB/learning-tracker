@@ -1,2 +1,2 @@
 ## Learning Tracker
-<img width="780" height="937" alt="Screenshot 2025-10-08 at 07 23 15" src="https://github.com/user-attachments/assets/ac40381b-5eab-4e9e-bcbd-ce5e941041e1" />
+<img width="885" height="957" alt="Screenshot 2025-11-14 at 10 05 16" src="https://github.com/user-attachments/assets/8e2f6de2-3221-4789-a5a9-7f00203a714d" />
