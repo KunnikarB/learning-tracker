@@ -158,7 +158,7 @@ header nav a.active {
 header nav a.active::after {
   width: 100%;               
   height: 2px;
-  background-color: #ff5c9b;
+  background-color: white;
   content: '';
   position: absolute;
   left: 0;
